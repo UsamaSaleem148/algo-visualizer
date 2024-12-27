@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Sort Visualization</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #arr_holder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      #arr_holder div {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, background-color 0.3s, border 0.3s;
+      }
+
+      .current {
+        border: 3px solid #ff6b6b;
+        transform: scale(1.1);
+      }
+
+      .swapped {
+        background-color: #1dd1a1;
+        transform: scale(1.1);
+      }
+
+      h1 {
+        position: absolute;
+        top: 20px;
+        font-size: 24px;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      }
+
+      footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bubble Sort Visualization</h1>
+    <div id="arr_holder"></div>
+    <footer>Presented by Muhammad Usama Saleem</footer>
+    <script src="bubblesort.js"></script>
+  </body>
+</html>
