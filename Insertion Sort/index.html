@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insertion Sort Visualization</title>
+    <style>
+      /* Body styling */
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+        color: #fff;
+        text-align: center;
+      }
+
+      /* Header styling */
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Array container styling */
+      #arr_holder {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        padding: 10px;
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        border-radius: 10px;
+      }
+
+      /* Array item styling */
+      .array-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 1s ease, box-shadow 0.3s ease;
+      }
+
+      /* Active state for sorting element */
+      .active {
+        background-color: #f39c12;
+        font-weight: bold;
+      }
+
+      /* Comparing state for elements */
+      .array-item.comparing {
+        background-color: #e74c3c;
+        font-weight: bold;
+      }
+
+      /* Temporary holder for the current element being sorted */
+      #temp_holder {
+        background-color: #ffc107;
+        color: #333;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 15px 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Footer styling */
+      footer {
+        font-size: 14px;
+        color: #fff;
+        margin-top: 30px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Responsive design for smaller screens */
+      @media (max-width: 768px) {
+        .array-item {
+          width: 50px;
+          height: 50px;
+          font-size: 16px;
+        }
+
+        #temp_holder {
+          font-size: 18px;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Insertion Sort Visualization</h1>
+
+    <!-- Array container -->
+    <div id="arr_holder">
+      <!-- Array elements will be dynamically rendered here -->
+    </div>
+
+    <!-- Temp value display -->
+    <div id="temp_holder">Current Element being sorted: <span id="temp_value">-</span></div>
+
+    <footer>Presented by Muhammad Usama Saleem</footer>
+
+    <script src="insertionSort.js"></script>
+  </body>
+</html>
